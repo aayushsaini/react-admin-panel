@@ -1,0 +1,11 @@
+:root {
+    --main-theme: #E50914;
+    --main-black: rgb(0, 0, 0);
+}
+
+.container {
+    display: flex;
+    .right-pane {
+        flex: 8;
+    }
+}

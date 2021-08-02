@@ -1,0 +1,12 @@
+.sidebar {
+    flex: 2;
+    height: calc(100vh - 6vh);
+    background-color: rgb(248, 247, 255);
+    position: -webkit-sticky, sticky;
+    overflow:scroll;
+    top: 1vh;
+    
+    .sidebar-wrapper {
+        padding: 20px;
+    }
+}

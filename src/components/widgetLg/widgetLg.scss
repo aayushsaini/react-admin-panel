@@ -1,7 +1,6 @@
-.widget-sm {
-    flex:1;
+.widget-lg {
+    flex: 2;
     padding: 1.2em;
-    margin-right: 1.2em;
     border-radius: 5px;
     background-color: #f7f7f7;
     height: 40vh;
@@ -15,10 +14,20 @@
         color: #adadad;
         margin-bottom: 0.5em;
     }
+    .wdgt-table {
+        width: 100%;
+        border-spacing: 20px;
 
-    .widget-sm-list {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
+        .wdgt-tr-1 {
+            color: rgb(87, 87, 87);
+            margin-bottom: 1em;
+            .wdgt-th {
+                text-align: left;
+            }
+        }
+        .wdgt-tr {
+            color: rgb(92, 92, 92);
+        }
     }
+    
 }

@@ -1,3 +1,7 @@
 .home {
     flex: 8;
+
+    .home-widgets {
+        display: flex;
+    }
 }

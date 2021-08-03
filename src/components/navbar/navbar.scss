@@ -28,6 +28,8 @@
         }
         .nav-right {
             display: flex;
+            position: absolute;
+            right:0;
             .nav-icons {
                 position: relative;
                 margin-left: 1.3em;

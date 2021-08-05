@@ -1,0 +1,51 @@
+.usersList {
+    flex: 8;
+    // display: flex;
+
+    .user {
+        display: flex;
+        align-items: center;
+        .user-img {
+            min-width: 2.2em;
+            max-width: 2.2em;
+            min-height: 2.2em;
+            max-height: 2.2em;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 0.7em;
+        }
+    }
+
+    .status {
+        &.active {
+            padding: 2px 11px;
+            border: none;
+            background-color: rgb(196, 255, 235);
+            color: rgb(9, 117, 9);
+        } 
+        &.inactive {
+            padding: 2px 6px;
+            border: none;
+            background-color: rgb(255, 209, 209);
+            color: red;
+        } 
+    }
+
+    .userListEdit {
+        border: none;
+        border-radius: 10px;
+        padding: 1px 8px;
+        background-color: rgb(200, 249, 255);
+        color: rgb(21, 99, 109);
+        color: rgb(39, 131, 54);
+        border: 1px solid rgb(21, 99, 109);
+        cursor: pointer;
+        margin-right: 2em;
+    }
+
+    .userListDelete {
+        font-size: 1.5em !important;
+        color: rgb(192, 37, 37);
+        cursor: pointer;
+    }
+}

@@ -19,10 +19,11 @@
             display: flex;
             align-items: center;
             transition: all ease 0.5s;
+            // width: 100%;
 
             &.active, &:hover {
                 background-color: rgb(237, 234, 255);
-                width: 100%;
+                // width: 100%;
                 // border-radius: 10px;
             }
 
@@ -32,6 +33,15 @@
 
             .icon-text {
                 padding-left: 1vw;
+            }
+
+            .sidebar-link {
+                text-decoration: none;
+                padding: 0;
+                margin: 0;
+                &::after, &::before, &:active, &:visited {
+                    color:rgb(60, 39, 182);
+                }
             }
         }
     }

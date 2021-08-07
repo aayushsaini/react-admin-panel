@@ -5,6 +5,7 @@ import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./pages/home/Home";
 import UsersList from "./pages/usersList/UsersList";
+import User from "./pages/user/User";
 
 function App() {
   return (
@@ -18,8 +19,13 @@ function App() {
           </Route>
         </Switch>
         <Switch>
-          <Route exact path="/Users">
+          <Route exact path="/users">
             <UsersList />
+          </Route>
+        </Switch>
+        <Switch>
+          <Route path="/user/:userId">
+            <User />
           </Route>
         </Switch>
       </div>

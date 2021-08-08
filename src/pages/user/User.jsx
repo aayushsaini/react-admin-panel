@@ -1,5 +1,6 @@
 import React from 'react';
 import "./user.scss";
+import { Link } from "react-router-dom";
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
@@ -13,7 +14,9 @@ const User = () => {
             <div className="user-title-container">
                 {/* <h1 className="user-title">Edit User</h1> */}
                 <h1 className="title">Edit User</h1>
-                <button className="add-user-btn">Create</button>
+                <Link to="/createUser">
+                    <button className="add-user-btn">Create</button>
+                </Link>
             </div>
             <div className="user-container">
                 <div className="user-show">

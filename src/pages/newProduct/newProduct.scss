@@ -1,0 +1,65 @@
+.new-user {
+    flex: 8;
+    margin: 1.2em 1.2em;
+    padding: 1em 1.2em;
+    background-color: #fff9ee;
+    border-radius: 5px;
+    max-height: max-content;
+
+    .title {
+        color: #7c5712;
+        font-size: 1.5em;
+    }
+
+    .new-user-form {
+        color: #7c5712;
+        display: flex;
+        flex-wrap: wrap;
+        
+        .entry-field {
+            width: 20vw;
+            display: flex;
+            flex-direction: column;
+            margin-top: 1em;
+            margin-right: 2em;
+
+            input {
+                border: none;
+                background-color: #ffefd2;
+                padding: 6px 6px;
+                border-radius: 5px;
+                border: 1px solid #f5daa7;
+                color: #7c5712;
+            }
+
+            .gender {
+                .gender-option {
+                    display: flex;
+                }
+                label {
+                    margin: 1em;
+                }
+            }
+
+            .new-user-select {
+                // -webkit-appearance: none;
+                background-color: #fff5e2;
+                border-radius: 5px;
+                border: 1px solid #f5daa7;
+                height: 2em;
+            }
+        }
+
+        .add-user {
+            max-height: max-content;
+            padding: 0.3em 1.5em;
+            border: 1px solid #ffd079;
+            background-color: #ffe7bc;
+            color: #a17118;
+            font-weight: 600;
+            border-radius: 5px;
+            margin-top: 3.5em;
+            cursor: pointer;
+        }
+    }
+}

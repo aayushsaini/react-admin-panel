@@ -38,7 +38,7 @@
             background-color: rgba(218, 245, 255, 0.8);
             margin-right: 0.5em;
             padding-bottom: 2em;
-            height: max-content;
+            // height: max-content;
 
             .user-show-top {
                 display: flex;
@@ -93,7 +93,7 @@
             flex: 4;
             padding: 20px;
             border-radius: 5px;
-            background-color: #f7f7f7;
+            background-color: #f1f1f1;
             margin-left: 0.5em;
 
             .title {
@@ -152,12 +152,13 @@
                     }
                     .upload-btn {
                         border: none;
-                        background-color: #037ecf;
+                        background-color: #5348b9;
                         color: white;
                         font-weight: 600;
                         cursor: pointer;
                         padding: 6px 6px;
                         border-radius: 5px;
+                        margin-right: 1em;
                         transition: all ease 0.3s;
                         &:hover {
                             filter: brightness(85%);

@@ -6,6 +6,9 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./pages/home/Home";
 import UsersList from "./pages/usersList/UsersList";
 import User from "./pages/user/User";
+import NewUser from "./pages/newUser/NewUser";
+import Products from "./pages/ProductList/Products";
+import NewProduct from "./pages/newProduct/NewProduct";
 
 function App() {
   return (
@@ -19,13 +22,33 @@ function App() {
           </Route>
         </Switch>
         <Switch>
-          <Route exact path="/users">
+          <Route path="/users">
             <UsersList />
           </Route>
         </Switch>
         <Switch>
           <Route path="/user/:userId">
             <User />
+          </Route>
+        </Switch>
+        <Switch>
+          <Route path="/createUser">
+            <NewUser />
+          </Route>
+        </Switch>
+        <Switch>
+          <Route path="/products">
+            <Products />
+          </Route>
+        </Switch>
+        <Switch>
+          <Route path="/product/:productId">
+            <User />
+          </Route>
+        </Switch>
+        <Switch>
+          <Route path="/createProduct">
+            <NewProduct />
           </Route>
         </Switch>
       </div>

@@ -1,17 +1,16 @@
-import { React, useState } from 'react';
-import "./usersList.scss";
+import React, { useState } from 'react';
+import "./products.scss";
 import { DataGrid } from '@material-ui/data-grid';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
-import { userList } from "../../data/userList";
+import { productData } from "../../data/productData";
 import { Link } from 'react-router-dom';
 
-const UsersList = () => {
+const Products = () => {
 
-    const [data, setData] = useState(userList);
+    const [data, setData] = useState(productData);
 
     const handleDelete = (id) => {
         setData(data.filter((item) => item.id !== id));
-        // console.log(data[id]);
     };
 
     const columns = [
@@ -22,25 +21,25 @@ const UsersList = () => {
         },
         {
             field: 'user',
-            headerName: 'User Name',
-            width: 200,
+            headerName: 'Product Name',
+            width: 300,
             renderCell: (params) => {
                 return(
-                    <div className="user">
+                    <div className="product">
                         <img 
-                        className="user-img"
-                        src={params.row.avatar} 
+                        className="product-img"
+                        src={params.row.img} 
                         alt="" 
                         />
-                        {params.row.userName}
+                        {params.row.name}
                     </div>
                 )
             }
         },
         {
-            field: 'email',
-            headerName: 'Email',
-            width: 250,
+            field: 'stock',
+            headerName: 'Stock',
+            width: 150,
             editable: true,
         },
         {
@@ -51,20 +50,19 @@ const UsersList = () => {
             renderCell: (params) => {
                 return (
                     <>
-                    {params.row.status === "Active" ?
-                        <button disabled className="status active">Active</button>
+                    {params.row.status === "active" ?
+                        <button disabled className="status active">Available</button>
                         :
-                        <button disabled className="status inactive">Inactive</button>
+                        <button disabled className="status inactive">Out of Stock</button>
                     }
                     </>
                 )
             }
         },
         {
-            field: 'transaction',
-            headerName: 'Transaction',
+            field: 'price',
+            headerName: 'Price',
             width: 150,
-            editable: true,
         },
         {
             field: 'action',
@@ -73,11 +71,11 @@ const UsersList = () => {
             renderCell: (params) => {
                 return (
                     <>
-                        <Link to={`/user/${params.row.id}`}>
-                            <button className="userListEdit">Edit</button>
+                        <Link to={`/product/${params.row.id}`}>
+                            <button className="productListEdit">Edit</button>
                         </Link>
                         <DeleteOutlineIcon
-                         className="userListDelete"
+                         className="productListDelete"
                          onClick={() => handleDelete(params.row.id)} 
                         />
                     </>
@@ -87,17 +85,17 @@ const UsersList = () => {
     ];
 
     return (
-        <div className="usersList">
+        <div className="products">
             <DataGrid
                 rows={ data }
                 columns={columns}
-                pageSize={12}
+                pageSize={11}
                 checkboxSelection
                 disableSelectionOnClick
                 
-            />
+            />  
         </div>
     )
 }
 
-export default UsersList
+export default Products

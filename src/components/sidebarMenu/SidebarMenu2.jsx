@@ -18,7 +18,10 @@ const SidebarMenu2 = () => {
                     </Link>
                 </li>
                 <li className="sidebar-list-item">
-                    <StorefrontIcon className="sidebar-icon" /> <span className="icon-text">Products</span>
+                    <StorefrontIcon className="sidebar-icon" /> 
+                    <Link className="sidebar-link" to="/products">
+                        <span className="icon-text">Products</span>
+                    </Link>
                 </li>
                 <li className="sidebar-list-item">
                     <AttachMoneyIcon className="sidebar-icon" /> <span className="icon-text">Transactions</span>
